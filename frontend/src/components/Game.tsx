@@ -2,6 +2,8 @@ import { useGameState } from "../hooks/useGameState";
 import { BoardView } from "./board/BoardView";
 import { GameInfo } from "./gameInfo/GameInfo";
 import { GameOverlay } from "./gameOverlay/GameOverlay";
+import { DepthSelector } from "./depthSelector/DepthSelector";
+
 import './Game.css';
 
 // Game Configuration
@@ -20,22 +22,39 @@ export const Game = () => {
         gameStatus,
         winner,
         isAIThinking,
+        aiDepth,
         handleIntersectionClick,
         resetGame,
+        setAIDepth,
         convertPixelToCoords,
         boardSize,
         cellSize,
         margin
     } = useGameState(GAME_CONFIG);
 
+    const handleDepthChnage = (newDepth: number) => {
+        setAIDepth(newDepth);
+        resetGame();
+    }
+
     return (
         <div className="game-container">
             {/* Game Info */}
-            <GameInfo
-                currentTurn={currentTurn}
-                isAIThinking={isAIThinking}
-                onReset={resetGame}
-            />
+            <div className="game-controls">
+                <GameInfo
+                    currentTurn={currentTurn}
+                    isAIThinking={isAIThinking}
+                    onReset={resetGame}
+                />
+                <DepthSelector
+                    depth={aiDepth}
+                    minDepth={1}
+                    maxDepth={7}
+                    onDepthChange={handleDepthChnage}
+                    disabled={isAIThinking}
+                />
+            </div>
+
 
             {/* Render Game */}
             <div className="board-wrapper">

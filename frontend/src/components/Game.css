@@ -5,6 +5,12 @@
     gap: 24px;
 }
 
+.game-controls {
+    display: flex;
+    align-items: stretch;
+    gap: 16px;
+}
+
 .board-wrapper {
     position: relative;
     padding: 8px;
