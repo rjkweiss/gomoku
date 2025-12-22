@@ -1,14 +1,14 @@
 .depth-selector-container {
-    display: flex;
-    flex-direction: column;
     align-items: center;
-    gap: 8px;
-    padding: 12px 20px;
     background: linear-gradient(135deg, #2c3e50 0%, #1a252f 100%);
     border-radius: 12px;
     box-shadow:
         0 4px 15px rgba(0, 0, 0, 0.3),
         inset 0 1px 0 rgba(255, 255, 255, 0.1);
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    padding: 12px 20px;
 }
 
 .depth-selector-container.disabled {
@@ -17,37 +17,37 @@
 }
 
 .depth-label {
+    color: #7f8c8d;
     font-size: 12px;
     font-weight: 600;
-    color: #7f8c8d;
-    text-transform: uppercase;
     letter-spacing: 1px;
+    text-transform: uppercase;
 }
 
 .depth-controls {
-    display: flex;
     align-items: center;
+    display: flex;
     gap: 12px;
 }
 
 .depth-btn {
-    width: 36px;
-    height: 36px;
+    align-items: center;
     border: none;
     border-radius: 50%;
-    font-size: 20px;
-    font-weight: bold;
     cursor: pointer;
-    transition: all 0.2s ease;
     display: flex;
-    align-items: center;
+    font-size: 22px;
+    font-weight: bold;
+    height: 40px;
     justify-content: center;
+    width: 40px;
+    transition: all 0.2s ease;
 }
 
 .depth-btn.decrease {
     background: linear-gradient(135deg, #e74c3c 0%, #c0392b 100%);
-    color: #fff;
     box-shadow: 0 3px 10px rgba(231, 76, 60, 0.4);
+    color: #fff;
 }
 
 .depth-btn.decrease:hover:not(:disabled) {
@@ -57,8 +57,8 @@
 
 .depth-btn.increase {
     background: linear-gradient(135deg, #27ae60 0%, #1e8449 100%);
-    color: #fff;
     box-shadow: 0 3px 10px rgba(39, 174, 96, 0.4);
+    color: #fff;
 }
 
 .depth-btn.increase:hover:not(:disabled) {
@@ -67,8 +67,8 @@
 }
 
 .depth-btn:disabled {
-    opacity: 0.4;
     cursor: not-allowed;
+    opacity: 0.4;
     transform: none;
 }
 
@@ -77,27 +77,27 @@
 }
 
 .depth-display {
+    align-items: center;
     display: flex;
     flex-direction: column;
-    align-items: center;
     min-width: 70px;
 }
 
 .depth-value {
-    font-size: 28px;
-    font-weight: 700;
     color: #ecf0f1;
+    font-size: 32px;
+    font-weight: 700;
     line-height: 1;
 }
 
 .difficulty-label {
+    border-radius: 4px;
     font-size: 11px;
     font-weight: 600;
-    text-transform: uppercase;
     letter-spacing: 1px;
-    padding: 2px 8px;
-    border-radius: 4px;
     margin-top: 4px;
+    padding: 2px 8px;
+    text-transform: uppercase;
 }
 
 .difficulty-label.easy {
