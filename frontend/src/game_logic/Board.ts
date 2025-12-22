@@ -122,7 +122,7 @@ export class Board {
 
     public countInDirection(row: number, col: number, direction: Direction): CountResults {
         let numOfSameStones = 0;
-        let [dRow, dCol] = direction;
+        const [dRow, dCol] = direction;
 
         // get next row and next col
         let nextRow = row + dRow;

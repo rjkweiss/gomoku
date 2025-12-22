@@ -27,7 +27,7 @@ export class AIPlayer {
 
         // initialize alpha and beta values for pruning
         let alpha: number = -Infinity;
-        let beta: number = Infinity;
+        const beta: number = Infinity;
 
         // get moves
         const moves = this.getPossibleMoves();
