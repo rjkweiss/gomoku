@@ -4,7 +4,7 @@ import prisma from '../../lib/prisma.js';
 import { createToken } from '../../lib/auth.js';
 import { handleCors } from '../../lib/cors.js';
 
-const handler = async (req: VercelRequest, res: VercelResponse) => {
+export default async function handler(req: VercelRequest, res: VercelResponse) {
     if (handleCors(req, res)) return;
 
     // Only allow POST requests
@@ -74,5 +74,3 @@ const handler = async (req: VercelRequest, res: VercelResponse) => {
         });
     }
 };
-
-export default handler;
