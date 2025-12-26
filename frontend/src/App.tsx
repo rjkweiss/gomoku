@@ -1,4 +1,5 @@
-import { AuthProvider, useAuth } from './context/AuthContext';
+import { AuthProvider } from './context/AuthProvider';
+import { useAuth } from './context/useAuth';
 import { AuthPage } from './components/auth/AuthPage';
 import { Game } from './components/Game';
 
