@@ -30,3 +30,4 @@ npm-debug.log*
 # Generated
 backend/generated/
 .env*.local
+.vercel
